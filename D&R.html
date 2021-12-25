@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>D&R CO.</title>
+</head>
+<body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="noindex, nofollow, noarchive, noyaca">
+    <title>Orders - 4Logist</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="verify-paysera" content="d6053705cd9d3b291fa7fa2e11a8d082">
+
+    <script type="text/javascript" async="" src="//code.jivosite.com/script/widget/mdLVYHVxl7"></script><script src="/build/js/router/router.min.d6492cca.js"></script>
+    <script src="/build/js/router/routes.fb0eb7ce.js"></script>
+    
+    <script>
+        locale = 'en';
+        if (typeof (Langs) == 'undefined') {
+            Langs = {};
+        }
+        Langs.FormHasErrors = 'There are mistakes in the form';
+        Langs.NewMessage = 'Document is sending';
+        Langs.ErrorCannotDeleteObject = '__ErrorCannotDeleteObject';
+        Langs.ObjectNotExistsOrDeleted = "Object not exists or deleted";
+        var assetVersion = '1a99a6d690951e2008f6fb92606a2bad';
+        Routing.setHost('logist623045.4logist.com');
+        DefaultDateFormat = 'yy-mm-dd';
+    </script><script src="/build/runtime.1630695a.js"></script><script src="/build/app.8a1cd2a2.js"></script>
+    <script src="/build/libs.61629968.js"></script>
+            <link rel="stylesheet" href="/build/libs.348f42e2.css">
+        <link rel="stylesheet" href="/build/app.3b9b9b88.css">
+            
+        <script type="text/javascript" src="/build/js/application.d8b66fcf.js"></script>
+    <script type="text/javascript" src="/build/js/notification.0bfdfc16.js"></script>
+    <script type="text/javascript" src="/build/js/mailbuffer.2cfd1701.js"></script>
+    <script type="text/javascript" src="/build/js/message/add.3f147662.js"></script>
+    <script type="text/javascript" src="/build/js/pdf-preview/init.1b7ade4b.js"></script>
+    <script type="text/javascript" src="/build/js/vatFieldCalculator.b87f608a.js"></script>
+    <script type="text/javascript" src="/build/js/ymGoal.519fcfab.js"></script>
+    <script type="text/javascript" src="/build/js/fileUploader.9f6b9979.js"></script>
+    <script type="text/javascript" src="/build/js/base64.39d56d70.js"></script>
+    <script>
+        $(function () {
+            if ($.browser.msie ||
+                ($.browser.edge && $.browser.versionNumber < 15) ||
+                ($.browser.firefox && $.browser.versionNumber < 54) ||
+                ($.browser.chrome && $.browser.versionNumber < 51) ||
+                ($.browser.safari && $.browser.versionNumber < 10) ||
+                ($.browser.opera && $.browser.versionNumber < 38)
+            ) {
+                $('#obsoleteBrowserMsg').show();
+                if ( $('#licenseExpireMsg').length > 0) {
+                    $('.header').height('100px');
+                }
+            }
+        });
+        $(function () {
+            Langs.AttachFile = 'Attach file';
+            $(".chosen-select").chosen();
+            fileUploader.defaultUploadUrl = '/file/upload';
+
+                    });
+    </script>
+        <script type="text/javascript">
+        var addOrderUrl = 'https://logist623045.4logist.com/transport/order/add';
+        var checkReportStatusUrl = 'https://logist623045.4logist.com/shared/settings/export/check-status';
+
+        Langs.NewOrder = 'New order';
+        Langs.EditOrder = 'Change order';
+        Langs.CancelOrderForm = 'Refuse';
+        Langs.OrderConfirmSubmit = 'Confirm';
+        Langs.ViewComments = 'Order comments';
+        var defaultCurrency = '3';
+        Langs.ConfirmDeleteOrder = 'Would you really like to delete the order?';
+        Langs.ConfirmOrderCopy = 'Would you really like to make a copy of the order?';
+        Langs.ConfirmOrderDuplicate = 'Do you really want to duplicate the order?';
+                Langs.ExportInProgress= 'Report is being created...';
+        Langs.ExportError = 'Report creating error';
+        Langs.ToBeRemoved = 'To be removed';
+    </script>
+    <script type="text/javascript" src="/build/js/order/index.329a65ad.js"></script>
+    <!--  Kodas skirtas dirbti su request add dialogu -->
+    <script type="text/javascript" src="/build/js/order/add.3f7f23ee.js"></script>
+        <style type="text/css">
+                    .data-tab tbody tr.status-id-1,
+            .data-tab tbody tr.status-id-1 a {
+                            }
+            .data-tab tbody tr.status-id-1 {
+                            }
+                    .data-tab tbody tr.status-id-20,
+            .data-tab tbody tr.status-id-20 a {
+                            }
+            .data-tab tbody tr.status-id-20 {
+                            }
+                    .data-tab tbody tr.status-id-30,
+            .data-tab tbody tr.status-id-30 a {
+                            }
+            .data-tab tbody tr.status-id-30 {
+                            }
+                    .data-tab tbody tr.status-id-31,
+            .data-tab tbody tr.status-id-31 a {
+                            }
+            .data-tab tbody tr.status-id-31 {
+                            }
+            </style>
+<link rel="stylesheet" href="https://code-eu1.jivosite.com/css/d2579c6e/widget.css"></head>
+</body>
+<body style="">
+
+    <div class="body">
+        <div class="alarms">
+                                                    <div class="license-info" id="obsoleteBrowserMsg" style="display: none">
+                <p class="license-info-text pull-left">
+                    Your browser is outdated. Please, update it <a target="_black" href="https://wiki.4logist.com/ru/Устаревший_браузер.">here</a>                </p>
+            </div>
+        </div>
+        <div class="header">
+            <div class="content">
+                <a class="guide-open-btn" href="#" title="Show tips" onclick="startGuide()" style="display: none;"></a>
+                <div class="language">
+    
+                        <a href="https://logist623045.4logist.com/change-language/en" class="selected"><p>English</p>
+            </a>
+                                <a href="https://logist623045.4logist.com/change-language/ru"><p>Русский</p>
+            </a>
+                                <a href="https://logist623045.4logist.com/change-language/pl"><p>Polski</p>
+            </a>
+                                <a href="https://logist623045.4logist.com/change-language/lt"><p>Lietuvių</p>
+            </a>
+            </div>
+                <script type="text/javascript">
+    var loadNotificationUrl = 'https://logist623045.4logist.com/crm/event/notifications/load';
+</script> 
+<a href="#" id="show-notifications-btn" onclick="return false;" class="notification">
+  <span>Notifications</span>
+  <p>0</p>
+</a>
+<div class="notifications-window" style="display:none;">
+    <div class="notification-list">
+    </div>
+</div>
+                <script>
+                    var addDocumentSendBufferUrl = "https://logist623045.4logist.com/crm/client/messages/add-document-buffer";
+                    var addDocumentSendBufferName = 'Document is sending';
+                </script>
+                <div id="DocumentSendBuffer"><a href="#" data-url="https://logist623045.4logist.com/crm/client/messages/add/0/multi-doc" onclick="return false;" class="notification" style="display:none;">
+    <span>Document sending</span>
+    <p>0</p>
+</a></div>
+                                                        <a class="wiki-open-btn" href="#" title="Open directory"></a>
+                    <div class="wiki-wrapper" data-src="https://wiki.4logist.com/">
+                        <a href="https://wiki.4logist.com/" target="_blank" class="wiki-open-out-btn"></a>
+                        <a href="#" class="wiki-close-btn"></a>
+                    </div>
+                                <a class="logout-btn" href="/logout" title="Log out"></a>
+            </div>
+        </div>
+        <div class="menu">
+    <div class="content">
+                <a class=" menu-item requests" href="https://logist623045.4logist.com/transport/request/" title="Requests"><div><span></span><p>Requests</p></div></a>
+                <a class="selected menu-item orders" href="https://logist623045.4logist.com/transport/order/" title="Orders"><div><span></span><p>Orders</p></div></a>
+                <a class=" menu-item finance" href="https://logist623045.4logist.com/finance/" title="Finance"><div><span></span><p>Finance</p></div></a>
+                <a class=" menu-item clients" href="https://logist623045.4logist.com/crm/client/" title="Clients"><div><span></span><p>Clients</p></div></a>
+                <a class=" menu-item transportes" href="https://logist623045.4logist.com/crm/carrier/" title="Carriers"><div><span></span><p>Carriers</p></div></a>
+                <a class=" menu-item debts" href="https://logist623045.4logist.com/transport/report/" title="Reports"><div><span></span><p>Reports</p></div></a>
+                <a class=" menu-item calendar" href="https://logist623045.4logist.com/calendar/index" title="Calendar"><div><span></span><p>Calendar</p></div></a>
+                <a class=" menu-item settings" href="https://logist623045.4logist.com/shared/settings/" title="Settings"><div><span></span><p>Settings</p></div></a>
+            </div>
+</div>
+<div class="sub_menu sub_menu_orders">
+                    <a class="selected " href="https://logist623045.4logist.com/transport/order/list" title="Orders">Orders</a>
+                    <a class=" " href="https://logist623045.4logist.com/transport/order/consignments/index" title="Cargos">Cargos</a>
+                    <a class=" " href="https://logist623045.4logist.com/transport/order/trips/index" title="Trips">Trips</a>
+                    <a class=" " href="https://logist623045.4logist.com/transport/order/status/list" title="Cargos status">Cargos status</a>
+        </div>
+
+        <div class="content">
+                <script type="text/javascript">
+    var autocompleteClientUrl = 'https://logist623045.4logist.com/data/autocomplete/client';
+    var autocompleteLoadingPlaceUrl = 'https://logist623045.4logist.com/data/autocomplete/loading-place';
+    var autocompleteCarrierUrl = 'https://logist623045.4logist.com/data/autocomplete/client/1';
+    var autocompleteDriverUrl = 'https://logist623045.4logist.com/data/autocomplete/driver';
+</script>
+<form id="list-filter" class="tab filter-tab" name="request" action="" method="get">
+    <div class="gfilter">
+
+        <div class="config clearfix">
+            <div class="title">Show filters:</div>
+            <ul class="group-labels clearfix">
+                <li data-group="main" data-default="true" class="active"><a href="#">ID</a></li>
+                <li data-group="date" data-default="true" class="active"><a href="#">Date</a></li>
+                <li data-group="client"><a href="#">Clients</a></li>
+                <li data-group="loading"><a href="#">Loading</a></li>
+                <li data-group="unloading"><a href="#">Unloading</a></li>
+                <li data-group="person"><a href="#">Users</a></li>
+                <li data-group="invoice"><a href="#">Invoices</a></li>
+                <li data-group="transport"><a href="#">Transport</a></li>
+                <li data-group="trips"><a href="#">Trips</a></li>
+                <li data-group="custom"><a href="#">Other</a></li>
+                                    <li data-group="order"><a href="#">Sort</a></li>
+                            </ul>
+        </div>
+
+        <div class="groups">
+            <div class="filter-group clearfix" data-group="main" style="">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">ID:</div>
+                <div class="fields">
+                    <div class="filter-param" data-field="order_id">
+                        <label>Order number</label>
+                        <input type="text" class="short" name="filter[order_id]" value="">
+                    </div>
+                                            <div class="filter-param" data-field="invoice_number">
+                            <label>Invoice number</label>
+                            <input type="text" class="short" name="filter[invoice_number]" value="">
+                        </div>
+                                        <div class="filter-param" data-field="document_number">
+                        <label>Contract number</label>
+                        <input type="text" class="short" name="filter[document_number]" value="">
+                    </div>
+                                            <div class="filter-param" data-field="status_id">
+                            <label for="status">Status</label>
+                            <select autocomplete="off" class="select2 select2-standard select2-hidden-accessible" multiple="" data-placeholder="Status" name="filter[status][]" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                                    <option value="1">Planuojamas</option>
+                                                                    <option value="20">Vykdomas</option>
+                                                                    <option value="30">Baigtas</option>
+                                                                    <option value="31">Finansiškai uždarytas	</option>
+                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Status" style="width: 182px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                    
+                                                        </div>
+            </div>
+            <div class="filter-group clearfix" data-group="date" style="">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Date:</div>
+                <div class="fields">
+                    <div class="filter-param" data-field="start_date">
+                        <label for="start_date">Order date From:</label>
+                        <input type="text" id="start_date" class="date hasDatepicker" autocomplete="off" name="filter[start_date]" value="2021-09-01">
+                        <label for="end_date">To:</label>
+                        <input type="text" id="end_date" class="date hasDatepicker" autocomplete="off" name="filter[end_date]" value="">
+                    </div>
+
+                    <div class="filter-param" data-field="act_start_date">
+                        <label for="act_start_date">Act creation date From:</label>
+                        <input type="text" id="act_start_date" class="date hasDatepicker" autocomplete="off" name="filter[act_start_date]" value="">
+                        <label for="act_end_date">To:</label>
+                        <input type="text" id="act_end_date" class="date hasDatepicker" autocomplete="off" name="filter[act_end_date]" value="">
+                    </div>
+
+                    <div class="filter-param" data-field="act_document_date">
+                        <label for="act_document_date_from">Act date From:</label>
+                        <input type="text" id="act_document_date_from" class="date hasDatepicker" autocomplete="off" name="filter[act_document_date_from]" value="">
+                        <label for="act_document_date_to">To:</label>
+                        <input type="text" id="act_document_date_to" class="date hasDatepicker" autocomplete="off" name="filter[act_document_date_to]" value="">
+                    </div>
+
+                    <div class="filter-param" data-field="cmr_unloading_date_start">
+                        <label for="cmr_unloading_date_start">CMR unloading date From:</label>
+                        <input type="text" id="cmr_unloading_date_start" autocomplete="off" class="date hasDatepicker" name="filter[cmr_unloading_date_start]" value="">
+                        <label for="cmr_unloading_date_end">To:</label>
+                        <input type="text" id="cmr_unloading_date_end" autocomplete="off" class="date hasDatepicker" name="filter[cmr_unloading_date_end]" value="">
+                    </div>
+
+                    <div class="filter-param" data-field="invoice_date_start">
+                        <label for="invoice_date_start">Invoice issued From:</label>
+                        <input type="text" id="invoice_date_start" class="date hasDatepicker" autocomplete="off" name="filter[invoice_date_start]" value="">
+                        <label for="invoice_date_end">To:</label>
+                        <input type="text" id="invoice_date_end" class="date hasDatepicker" autocomplete="off" name="filter[invoice_date_end]" value="">
+                    </div>
+
+                    <div class="filter-param">
+                        <label for="week_number">Week:</label>
+                        <input type="text" id="week_number" style="width: 1.2em;" name="filter[week_number]" value="">
+                        <label for="week_year">Year:</label>
+                        <input type="text" id="week_year" style="width: 2.5em;" name="filter[week_year]" value="">
+                    </div>
+
+                    <div class="filter-param" data-field="status_date">
+                        <label for="status_date_start">Order status date From:</label>
+                        <input type="text" id="status_date_start" class="date hasDatepicker" autocomplete="off" name="filter[status_date_start]" value="">
+                        <label for="status_date_end">To:</label>
+                        <input type="text" id="status_date_end" class="date hasDatepicker" autocomplete="off" name="filter[status_date_end]" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group clearfix" data-group="client" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Clients:</div>
+                <div class="fields">
+                                            <div class="filter-param" data-field="segment_id">
+                            <label>Client type</label>
+                            <select autocomplete="off" data-placeholder="Segment" name="filter[segment_id]" id="segment_id" class="select2 select2-short select2-hidden-accessible" data-select2-id="segment_id" tabindex="-1" aria-hidden="true">
+                                <option value="" data-select2-id="4"></option>
+                                                                                                            <option value="3">VIP	</option>
+                                                                            <option value="2">Super klientas</option>
+                                                                            <option value="1">Paprastas klientas	</option>
+                                                                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: 112px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-segment_id-container"><span class="select2-selection__rendered" id="select2-segment_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Segment</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                                                            <div class="filter-param" data-field="client_id">
+                                    <label for="client_id">Client</label>
+                                    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input id="client_id" type="text" name="filter[client]" class="medium ui-autocomplete-input" value="" autocomplete="off">
+                                    <input type="hidden" name="filter[client_id]" value="">
+                                </div>
+                                                                                        <div class="filter-param">
+                        <label for="activityarea_id">Activity area</label>
+                        <select autocomplete="off" data-placeholder="Activity area" name="filter[activityarea_id][]" id="activityarea_id" class="select2 select2-standard select2-hidden-accessible" multiple="" data-select2-id="activityarea_id" tabindex="-1" aria-hidden="true">
+                                                            <option value="1">
+                                    Farmakologija
+                                </option>
+                                                            <option value="2">
+                                    Maisto produktai	
+                                </option>
+                                                            <option value="3">
+                                    Medienos apdirbimas	
+                                </option>
+                                                            <option value="4">
+                                    Negabaritiniai kroviniai	
+                                </option>
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="5" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Activity area" style="width: 100px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                                    </div>
+            </div>
+            <div class="filter-group clearfix" data-group="loading" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Loading:</div>
+                <div class="fields">
+                    <div class="filter-param" data-field="loading_place">
+                        <label>Loading place:</label>
+                        <label for="loading_place">Place / Company:</label>
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="medium ui-autocomplete-input" type="text" id="loading_place" name="filter[loading_place]" value="" autocomplete="off">
+                        <label for="loading_country_id">Country:</label>
+                        <select autocomplete="off" data-placeholder="Country" multiple="" name="filter[loading_country_id][]" id="loading_country_id" class="select2 select2-standard select2-hidden-accessible" data-select2-id="loading_country_id" tabindex="-1" aria-hidden="true">
+                                                                                                <option value="67">Afganistanas</option>
+                                                                    <option value="29">Airija</option>
+                                                                    <option value="68">Armėnija</option>
+                                                                    <option value="33">Austrija</option>
+                                                                    <option value="58">Azerbaidžianas</option>
+                                                                    <option value="69">Bahreinas</option>
+                                                                    <option value="6">Baltarusija</option>
+                                                                    <option value="70">Baltijos šalys (LT, LV ir EST)	</option>
+                                                                    <option value="71">Bangladešas</option>
+                                                                    <option value="12">Belgija</option>
+                                                                    <option value="30">Bulgarija</option>
+                                                                    <option value="72">Butanas	</option>
+                                                                    <option value="15">Čekija</option>
+                                                                    <option value="73">Danija</option>
+                                                                    <option value="74">Didžioji Britanija	</option>
+                                                                    <option value="3">Estija</option>
+                                                                    <option value="75">Filipinai</option>
+                                                                    <option value="76">Gibraltaras</option>
+                                                                    <option value="18">Graikija</option>
+                                                                    <option value="57">Gruzija</option>
+                                                                    <option value="77">Indija</option>
+                                                                    <option value="78">Indonezija</option>
+                                                                    <option value="66">Iranas</option>
+                                                                    <option value="13">Ispanija</option>
+                                                                    <option value="14">Italija</option>
+                                                                    <option value="53">Izraelis</option>
+                                                                    <option value="79">Japonija</option>
+                                                                    <option value="80">Jungtinė Karalystė (UK)	</option>
+                                                                    <option value="81">Jungtiniai Arabų Emyratai	</option>
+                                                                    <option value="82">Kanada</option>
+                                                                    <option value="7">Kazachstanas</option>
+                                                                    <option value="16">Kinija</option>
+                                                                    <option value="83">Kipras</option>
+                                                                    <option value="62">Kirgizija</option>
+                                                                    <option value="34">Kroatija</option>
+                                                                    <option value="2">Latvija</option>
+                                                                    <option value="4">Lenkija</option>
+                                                                    <option value="84">Libija</option>
+                                                                    <option value="1">Lietuva</option>
+                                                                    <option value="85">Liuxemburgas</option>
+                                                                    <option value="63">Malaizija</option>
+                                                                    <option value="86">Malta</option>
+                                                                    <option value="87">Marokas (Morocco)	</option>
+                                                                    <option value="88">Meksika</option>
+                                                                    <option value="89">Moldavija</option>
+                                                                    <option value="90">Mongolija</option>
+                                                                    <option value="56">Norvegija</option>
+                                                                    <option value="11">Olandija</option>
+                                                                    <option value="91">Pietų Afrikos Respublika (PAR)	</option>
+                                                                    <option value="92">Pietų Korėja	</option>
+                                                                    <option value="28">Portugalija</option>
+                                                                    <option value="10">Prancūzija</option>
+                                                                    <option value="51">Rumunija</option>
+                                                                    <option value="5">Rusija</option>
+                                                                    <option value="93">Saudo Arabija	</option>
+                                                                    <option value="35">Serbija</option>
+                                                                    <option value="65">Singapūras</option>
+                                                                    <option value="17">Slovakija</option>
+                                                                    <option value="32">Slovėnija</option>
+                                                                    <option value="94">Šri Lanka	</option>
+                                                                    <option value="95">Suomija</option>
+                                                                    <option value="54">Švedija</option>
+                                                                    <option value="31">Šveicarija</option>
+                                                                    <option value="97">Tailandas (Thailand)	</option>
+                                                                    <option value="52">Turkija</option>
+                                                                    <option value="59">Turkmėnistanas</option>
+                                                                    <option value="8">Ukraina</option>
+                                                                    <option value="98">USA</option>
+                                                                    <option value="60">Uzbekistanas</option>
+                                                                    <option value="19">Vengrija</option>
+                                                                    <option value="9">Vokietija</option>
+                                                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="6" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Country" style="width: 100px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        <label for="loading_postcode">Post code:</label>
+                        <input type="text" id="loading_postcode" class="short" name="filter[loading_postcode]" value="">
+                        <label for="loading_region_id">Region:</label>
+                        <select autocomplete="off" data-placeholder="Region" name="filter[loading_region_id]" id="loading_region_id" class="select2 select2-short select2-hidden-accessible" data-select2-id="loading_region_id" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="8"></option>
+                                                                                                <option value="3">Azija</option>
+                                                                    <option value="1">Europos Sąjunga</option>
+                                                                    <option value="2">NVS</option>
+                                                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="7" style="width: 112px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-loading_region_id-container"><span class="select2-selection__rendered" id="select2-loading_region_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Region</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        <label for="loading_city">City:</label>
+                        <input type="text" id="loading_city" class="short" name="filter[loading_city]" value="">
+                        <label for="loading_address">Address:</label>
+                        <input type="text" id="loading_address" class="short" name="filter[loading_address]" value="">
+                    </div>
+                    <div class="filter-param" data-field="loading_date">
+                        <label for="loading_date_from">Loading date From:</label>
+                        <input type="text" id="loading_date_from" class="date hasDatepicker" autocomplete="off" name="filter[loading_date_from]" value="">
+                        <label for="loading_date_to">To:</label>
+                        <input type="text" id="loading_date_to" class="date hasDatepicker" autocomplete="off" name="filter[loading_date_to]" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group clearfix" data-group="unloading" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Unloading:</div>
+                <div class="fields">
+                    <div class="filter-param" data-field="unloading_place">
+                        <label>Unloading place:</label>
+                        <label for="unloading_place">Place / Company:</label>
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="medium ui-autocomplete-input" type="text" id="unloading_place" name="filter[unloading_place]" value="" autocomplete="off">
+
+                        <label for="unloading_country_id">Country:</label>
+                        <select autocomplete="off" data-placeholder="Country" multiple="" name="filter[unloading_country_id][]" id="unloading_country_id" class="select2 select2-standard select2-hidden-accessible" data-select2-id="unloading_country_id" tabindex="-1" aria-hidden="true">
+                                                                                                <option value="67">Afganistanas</option>
+                                                                    <option value="29">Airija</option>
+                                                                    <option value="68">Armėnija</option>
+                                                                    <option value="33">Austrija</option>
+                                                                    <option value="58">Azerbaidžianas</option>
+                                                                    <option value="69">Bahreinas</option>
+                                                                    <option value="6">Baltarusija</option>
+                                                                    <option value="70">Baltijos šalys (LT, LV ir EST)	</option>
+                                                                    <option value="71">Bangladešas</option>
+                                                                    <option value="12">Belgija</option>
+                                                                    <option value="30">Bulgarija</option>
+                                                                    <option value="72">Butanas	</option>
+                                                                    <option value="15">Čekija</option>
+                                                                    <option value="73">Danija</option>
+                                                                    <option value="74">Didžioji Britanija	</option>
+                                                                    <option value="3">Estija</option>
+                                                                    <option value="75">Filipinai</option>
+                                                                    <option value="76">Gibraltaras</option>
+                                                                    <option value="18">Graikija</option>
+                                                                    <option value="57">Gruzija</option>
+                                                                    <option value="77">Indija</option>
+                                                                    <option value="78">Indonezija</option>
+                                                                    <option value="66">Iranas</option>
+                                                                    <option value="13">Ispanija</option>
+                                                                    <option value="14">Italija</option>
+                                                                    <option value="53">Izraelis</option>
+                                                                    <option value="79">Japonija</option>
+                                                                    <option value="80">Jungtinė Karalystė (UK)	</option>
+                                                                    <option value="81">Jungtiniai Arabų Emyratai	</option>
+                                                                    <option value="82">Kanada</option>
+                                                                    <option value="7">Kazachstanas</option>
+                                                                    <option value="16">Kinija</option>
+                                                                    <option value="83">Kipras</option>
+                                                                    <option value="62">Kirgizija</option>
+                                                                    <option value="34">Kroatija</option>
+                                                                    <option value="2">Latvija</option>
+                                                                    <option value="4">Lenkija</option>
+                                                                    <option value="84">Libija</option>
+                                                                    <option value="1">Lietuva</option>
+                                                                    <option value="85">Liuxemburgas</option>
+                                                                    <option value="63">Malaizija</option>
+                                                                    <option value="86">Malta</option>
+                                                                    <option value="87">Marokas (Morocco)	</option>
+                                                                    <option value="88">Meksika</option>
+                                                                    <option value="89">Moldavija</option>
+                                                                    <option value="90">Mongolija</option>
+                                                                    <option value="56">Norvegija</option>
+                                                                    <option value="11">Olandija</option>
+                                                                    <option value="91">Pietų Afrikos Respublika (PAR)	</option>
+                                                                    <option value="92">Pietų Korėja	</option>
+                                                                    <option value="28">Portugalija</option>
+                                                                    <option value="10">Prancūzija</option>
+                                                                    <option value="51">Rumunija</option>
+                                                                    <option value="5">Rusija</option>
+                                                                    <option value="93">Saudo Arabija	</option>
+                                                                    <option value="35">Serbija</option>
+                                                                    <option value="65">Singapūras</option>
+                                                                    <option value="17">Slovakija</option>
+                                                                    <option value="32">Slovėnija</option>
+                                                                    <option value="94">Šri Lanka	</option>
+                                                                    <option value="95">Suomija</option>
+                                                                    <option value="54">Švedija</option>
+                                                                    <option value="31">Šveicarija</option>
+                                                                    <option value="97">Tailandas (Thailand)	</option>
+                                                                    <option value="52">Turkija</option>
+                                                                    <option value="59">Turkmėnistanas</option>
+                                                                    <option value="8">Ukraina</option>
+                                                                    <option value="98">USA</option>
+                                                                    <option value="60">Uzbekistanas</option>
+                                                                    <option value="19">Vengrija</option>
+                                                                    <option value="9">Vokietija</option>
+                                                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="9" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Country" style="width: 100px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        <label for="unloading_postcode">Post code:</label>
+                        <input type="text" id="unloading_postcode" class="short" name="filter[unloading_postcode]" value="">
+                        <label for="unloading_region_id">Region:</label>
+                        <select autocomplete="off" data-placeholder="Region" name="filter[unloading_region_id]" id="unloading_region_id" class="select2 select2-short select2-hidden-accessible" data-select2-id="unloading_region_id" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="11"></option>
+                                                                                                <option value="3">Azija</option>
+                                                                    <option value="1">Europos Sąjunga</option>
+                                                                    <option value="2">NVS</option>
+                                                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="10" style="width: 112px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-unloading_region_id-container"><span class="select2-selection__rendered" id="select2-unloading_region_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Region</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        <label for="unloading_city">City:</label>
+                        <input type="text" id="unloading_city" class="short" name="filter[unloading_city]" value="">
+                        <label for="unloading_address">Address:</label>
+                        <input type="text" id="unloading_address" class="short" name="filter[unloading_address]" value="">
+                    </div>
+                    <div class="filter-param" data-field="unloading_date">
+                        <label for="unloading_date_from">Unloading date From:</label>
+                        <input type="text" class="date hasDatepicker" autocomplete="off" id="unloading_date_from" name="filter[unloading_date_from]" value="">
+                        <label for="unloading_date_to">To:</label>
+                        <input type="text" class="date hasDatepicker" autocomplete="off" id="unloading_date_to" name="filter[unloading_date_to]" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group clearfix" data-group="person" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Users:</div>
+                <div class="fields">
+                    <div class="filter-param" data-field="user_id">
+                        <label>Manager</label>
+                        <select autocomplete="off" data-placeholder="Manager" name="filter[user_id]" id="user_id" class="select2 select2-standard select2-hidden-accessible" data-select2-id="user_id" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="13"></option>
+                                                                                                <option value="27">John</option>
+                                                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="12" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-user_id-container"><span class="select2-selection__rendered" id="select2-user_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Manager</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+
+                                        <div class="filter-param" data-field="user_id">
+                        <label for="company_department">Department</label>
+                        <select autocomplete="off" data-placeholder="Department" name="filter[company_department]" id="company_department" class="select2 select2-standard select2-hidden-accessible" data-select2-id="company_department" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="15"></option>
+                                                            <option value="1">Pardavimai</option>
+                                                            <option value="2">Transportas</option>
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="14" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-company_department-container"><span class="select2-selection__rendered" id="select2-company_department-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Department</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                    
+                    <div class="filter-param" data-field="trip_manager_id">
+                        <label>Forwarder</label>
+                        <select autocomplete="off" data-placeholder="Forwarder" name="filter[trip_manager_id]" id="trip_manager_id" class="select2 select2-standard select2-hidden-accessible" data-select2-id="trip_manager_id" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="17"></option>
+                                                                                                <option value="27">John</option>
+                                                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="16" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-trip_manager_id-container"><span class="select2-selection__rendered" id="select2-trip_manager_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Forwarder</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+
+                    <div class="filter-param" data-field="filter_additional_users">
+                        <label for="filter_additional_users">Additional managers</label>
+                        <select multiple="" autocomplete="off" data-placeholder="Additional managers" name="filter[additional_users][]" id="filter_additional_users" class="select2 select2-standard select2-hidden-accessible" data-select2-id="filter_additional_users" tabindex="-1" aria-hidden="true">
+                                                                                                <option value="27">John</option>
+                                                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="18" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Additional managers" style="width: 100px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group clearfix" data-group="invoice" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Invoices:</div>
+                <div class="fields">
+                    <div class="filter-param">
+                        <input type="checkbox" id="no_received_invoices" name="filter[no_received_invoices]" class="css-checkbox med">
+                        <label for="no_received_invoices" class="css-label med elegant">Without received trip invoices</label>
+                    </div>
+                    <div class="filter-param">
+                        <input type="checkbox" id="no_issued_invoices" value="1" name="filter[no_issued_invoices]" class="css-checkbox med">
+                        <label for="no_issued_invoices" class="css-label med elegant">No invoices</label>
+                    </div>
+                    <div class="filter-param" data-field="paid_status">
+                                                                                                    <label>Outgoing invoices are paid</label>
+                        <select autocomplete="off" class="select2 select2-mini select2-hidden-accessible" data-placeholder="Outgoing invoices are paid" data-minimum-results-for-search="Infinity" name="filter[all_issued_invoices_paid]" data-select2-id="19" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="21"></option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="20" style="width: 80px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-filterall_issued_invoices_paid-x8-container"><span class="select2-selection__rendered" id="select2-filterall_issued_invoices_paid-x8-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Outgoing invoices are paid</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+
+                    <div class="filter-param" data-field="paid_status">
+                                                                                                    <label>Received invoices are paid</label>
+                        <select autocomplete="off" class="select2 select2-mini select2-hidden-accessible" data-placeholder="Received invoices are paid" data-minimum-results-for-search="Infinity" name="filter[all_received_invoices_paid]" data-select2-id="22" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="24"></option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="23" style="width: 80px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-filterall_received_invoices_paid-0c-container"><span class="select2-selection__rendered" id="select2-filterall_received_invoices_paid-0c-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Received invoices are paid</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group clearfix" data-group="transport" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Transport:</div>
+                <div class="fields">
+                                            <div class="filter-param" data-field="segment_id">
+                            <label>Transport type</label>
+                            <select autocomplete="off" data-placeholder="Transport type" name="filter[transport_type_id]" id="transport_type_id" class="select2 select2-standard select2-hidden-accessible" data-select2-id="transport_type_id" tabindex="-1" aria-hidden="true">
+                                <option value="" data-select2-id="26"></option>
+                                                                                                            <option value="35">120 m³ uždarytas</option>
+                                                                            <option value="20">120 m³ uždarytas MPS</option>
+                                                                            <option value="21">138 m³ uždarytas MPS</option>
+                                                                            <option value="34">138 m³ uždarytas SPS</option>
+                                                                            <option value="36">Autovežis</option>
+                                                                            <option value="49">Bendrojo parko platforminis vagonas</option>
+                                                                            <option value="51">Bendrojo parko pusvagonis  </option>
+                                                                            <option value="47">Dengtas bendrojo parko vagonas</option>
+                                                                            <option value="48">Dengtas nuosavo parko vagonas</option>
+                                                                            <option value="37">Geležinkelio transportas</option>
+                                                                            <option value="38">Jumbo, 100m³</option>
+                                                                            <option value="16">Jūrų transportas</option>
+                                                                            <option value="39">Miškovežis</option>
+                                                                            <option value="50">Nuosavo parko platforminis vagonas </option>
+                                                                            <option value="40">Oro transportas</option>
+                                                                            <option value="41">Šaldytuvas</option>
+                                                                            <option value="42">Savivartis</option>
+                                                                            <option value="10">Tentas, 120m³</option>
+                                                                            <option value="43">Tentas, 30m³</option>
+                                                                            <option value="44">Tentas, 50m³</option>
+                                                                            <option value="11">Tentas, 82m³</option>
+                                                                            <option value="45">Tentas, 86m³</option>
+                                                                            <option value="12">Tentas, 92m³</option>
+                                                                            <option value="46">Vilkikas</option>
+                                                                            <option value="53">Авто</option>
+                                                                            <option value="52">ЖД</option>
+                                                                                                </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="25" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-transport_type_id-container"><span class="select2-selection__rendered" id="select2-transport_type_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Transport type</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                                        <div class="filter-param" data-field="truck_plate_number">
+                        <label>Vehicle number</label>
+                        <input type="text" name="filter[truck_plate_number]" class="short" value="">
+                    </div>
+                    <div class="filter-param" data-field="trip_driver">
+                        <label>Driver</label>
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="filter[trip_driver]" class="medium ui-autocomplete-input" value="" autocomplete="off">
+                    </div>
+                                            <div class="filter-param" data-field="carrier_id">
+                            <label for="carrier_id">Carrier</label>
+                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input id="carrier_id" type="text" name="filter[carrier]" class="medium ui-autocomplete-input" value="" autocomplete="off">
+                            <input type="hidden" name="filter[carrier_id]" value="">
+                        </div>
+                                    </div>
+            </div>
+            <div class="filter-group clearfix" data-group="trips" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Trips:</div>
+                <div class="fields">
+                    <div class="filter-param" data-field="segment_id">
+                        <label>Trip</label>
+                        <select autocomplete="off" data-placeholder="Trip" style="width: 120px;" name="filter[trip_parent]" id="filter_trip_id" class="select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-select2-id="filter_trip_id">
+                                                            <option value="" data-select2-id="47"></option>
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="46" style="width: 120px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-filter_trip_id-container"><span class="select2-selection__rendered" id="select2-filter_trip_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Trip</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group clearfix" data-group="custom" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Other:</div>
+                <div class="fields">
+                                                                <div class="filter-param">
+                            <label for="order_code_referral">Client's order number</label>
+                            <input id="order_code_referral" type="text" name="filter[order_code_referral]" class="medium" value="">
+                        </div>
+                                                                <div class="filter-param" data-field="segment_id">
+                            <label>Currency</label>
+                            <select autocomplete="off" data-placeholder="Currency" name="filter[currency_id]" id="currency_id" class="select2 select2-standard select2-hidden-accessible" data-select2-id="currency_id" tabindex="-1" aria-hidden="true">
+                                <option value="" data-select2-id="30"></option>
+                                                                    <option value="12">BYN</option>
+                                                                    <option value="100">CNY</option>
+                                                                    <option value="3">EUR</option>
+                                                                    <option value="110">GBP</option>
+                                                                    <option value="11">KZT</option>
+                                                                    <option value="131">MDL</option>
+                                                                    <option value="8">PLN</option>
+                                                                    <option value="9">RUB</option>
+                                                                    <option value="132">SEK</option>
+                                                                    <option value="10">UAH</option>
+                                                                    <option value="2">USD</option>
+                                                                    <option value="111">UZS</option>
+                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="29" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-currency_id-container"><span class="select2-selection__rendered" id="select2-currency_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Currency</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                                        <div class="filter-param">
+                        <label for="full_text">Comments</label>
+                        <input id="full_text" type="text" name="filter[full_text]" class="medium" value="">
+                    </div>
+                    <div class="filter-param">
+                        <input type="checkbox" id="is_partial" value="1" name="filter[is_partial]" class="css-checkbox med">
+                        <label for="is_partial" class="css-label med elegant">Partial cargo</label>
+                    </div>
+
+                    
+                    <div class="filter-param" data-field="paid_status">
+                                                                                                    <label>There is an act</label>
+                        <select autocomplete="off" class="select2 select2-mini select2-hidden-accessible" data-placeholder="There is an act" data-minimum-results-for-search="Infinity" name="filter[has_document_act]" data-select2-id="31" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="33"></option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="32" style="width: 80px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-filterhas_document_act-tu-container"><span class="select2-selection__rendered" id="select2-filterhas_document_act-tu-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">There is an act</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                                                                <div class="filter-param">
+                            <label for="consignment_container_number">Container №</label>
+                            <input id="consignment_container_number" type="text" name="filter[consignment_container_number]" class="short" value="">
+                        </div>
+                    
+                    <div class="filter-param">
+                        <label for="cmr_number">CMR number</label>
+                        <input id="cmr_number" type="text" name="filter[cmr_number]" class="short" value="">
+                    </div>
+
+                                                                                                                                    <div class="filter-param">
+                        <label for="universal_tags">Tags</label>
+                        <select data-predictive-url="https://logist623045.4logist.com/shared/settings/handbooks/universal-tag/predictive/1" autocomplete="off" multiple="" id="universal_tags" name="filter[universal_tags][]" class="select2 select2-standard select2-hidden-accessible" data-select2-id="universal_tags" tabindex="-1" aria-hidden="true">
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="34" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Select value" style="width: 100px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    </div>
+                </div>
+            </div>
+                        <div class="filter-group clearfix" data-group="order" style="display: none">
+                <div class="hide"><a href="#">&nbsp;</a></div>
+                <div class="label">Sort:</div>
+                <div class="filter-param">
+                    <label>By</label>
+                    <select autocomplete="off" class="select2 select2-standard select2-hidden-accessible" data-placeholder="By" name="filter[order_pole]" data-select2-id="35" tabindex="-1" aria-hidden="true">
+                        <option value="id" data-select2-id="37">id</option>
+                        <option value="order_code">Number</option>
+                        <option value="dateCreate">Order date</option>
+                        <option value="client">Client</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="36" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-filterorder_pole-3s-container"><span class="select2-selection__rendered" id="select2-filterorder_pole-3s-container" role="textbox" aria-readonly="true" title="id"><span class="select2-selection__clear" title="Remove all items" data-select2-id="38">×</span>id</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                </div>
+                <div class="filter-param">
+                    <label>Order</label>
+                    <select autocomplete="off" class="select2 select2-standard select2-hidden-accessible" data-placeholder="Order" name="filter[order_ascending]" data-select2-id="39" tabindex="-1" aria-hidden="true">
+                        <option value="desc" data-select2-id="41">Descending</option>
+                        <option value="asc">Ascending</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="40" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-filterorder_ascending-ve-container"><span class="select2-selection__rendered" id="select2-filterorder_ascending-ve-container" role="textbox" aria-readonly="true" title="Descending"><span class="select2-selection__clear" title="Remove all items" data-select2-id="42">×</span>Descending</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                </div>
+            </div>
+                    </div>
+    </div>
+
+    <input type="hidden" name="page" value="">
+    <input type="hidden" name="filter[show]" value="100">
+    <input type="hidden" name="filter[is_set]" value="1">
+    <input type="hidden" name="filter[clear]" value="0">
+    <div class="clear"></div>
+</form>
+    <div class="tab status-tab">
+        <div class="left-actions">
+            <a href="#" onclick="return false;" id="add-btn" class="new-order-btn">New order</a>                    </div>
+        <div class="filter-param filter-buttons">
+            <div>
+                <input type="button" class="filter1-btn" id="clear-btn" value="Clear">
+                <input type="button" class="filter2-btn" id="filter-btn" value="To filter">
+            </div>
+        </div>
+        <div class="right-actions">
+                            <a href="#" data-url="/transport/order/export" data-download-link="#export-orders-download-link" id="export-orders-btn" class="order-form-new-order-btn excel-export-btn">Excel</a>
+                <a href="#" id="export-orders-download-link" class="order-form-new-order-btn without-plus" style="display: none;">Load report</a>
+                                                                <a href="/transport/order/export-xml/" id="export-order-xml-btn" class="order-form-new-order-btn excel-export-btn">
+                XML unloading</a>
+                                    <a class="order-form-new-order-btn multi-change pointer">Change status</a>
+            <form method="post" id="change-status" action="/transport/order/transport/order/multi-change-status">
+                <div class="select-change-status">
+                    <select autocomplete="off" class="select2 select2-standard select2-hidden-accessible" data-placeholder="Status" title="Change status" name="status" data-select2-id="43" tabindex="-1" aria-hidden="true">
+                        <option value="" data-select2-id="45"></option>
+                                                    <option value="1">Planuojamas</option>
+                                                    <option value="20">Vykdomas</option>
+                                                    <option value="30">Baigtas</option>
+                                                    <option value="31">Finansiškai uždarytas	</option>
+                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="44" style="width: 194px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="Change status" tabindex="0" aria-disabled="false" aria-labelledby="select2-status-so-container"><span class="select2-selection__rendered" id="select2-status-so-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Status</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                </div>
+            </form>
+        </div>
+        <div class="clear"></div>
+
+                    <div class="summary">
+                <div class="first">Orders: <p class="width-amount">0</p></div>
+                <div class="first">Cargos: <p class="width-amount">0</p></div>
+                <div class="first">Trips:
+                    <p class="width-amount">
+                                                    0
+                                            </p>
+                </div>
+                <div class="first">Weight: <p class="width-amount">0</p></div>
+                <div class="first">Volume: <p class="width-amount">0</p></div>
+
+                <div class="first">
+                    Total freight:
+                    <p>0</p>
+                    EUR
+                </div>
+
+                                    <div class="last">
+                        Total profit:
+                                                    <p>0</p>
+                                                EUR
+                    </div>
+                                            </div>
+                <div class="clear"></div>
+    </div>
+                <div class="container">
+            <p class="empty_list">No orders...</p>
+        </div>
+    
+        </div>
+    </div>
+
+    <div class="footer">
+    <h1><a href="https://www.4logist.com">4LOGIST</a></h1> Copyright © 2013-2021
+</div>    
+    <script type="text/javascript" src="/build/js/enjoyhint.645bd16a.js"></script>
+    <script type="text/javascript" src="/build/js/main.ad296a42.js"></script>
+    <script type="text/javascript" src="/build/js/formHandbookCreator.59e6b9ac.js"></script>
+    <script>
+        Langs.Selectvalue = 'Select value';
+        jQuery(document).ready(function () {
+            App.decorateSelectFormField();
+            $('.numeric').numeric({'negative': false});
+            FormHandbookCreator.init();
+        });
+    </script>
+
+    <script>
+        jQuery(document).ready(function () {
+            App.setSelectWithFinder('#filter_trip_id', 'https://logist623045.4logist.com/transport/order/trips/trips-filter');
+            App.setSelectWithFinder('#clients_ids', 'https://logist623045.4logist.com/data/autocomplete/client', (clients) => {
+                return clients.map(client => {
+                    return {
+                        id: client.id,
+                        text: client.label
+                    };
+                });
+            }, 'term');
+            App.setSelectWithFinder('#carriers_ids', '/data/autocomplete/client/1', (carriers) => {
+                return carriers.map(carrier => {
+                    return {
+                        id: carrier.id,
+                        text: carrier.label
+                    };
+                });
+            }, 'term');
+        });
+    </script>
+    <!-- BEGIN JIVOSITE CODE {literal} -->
+    <script type="text/javascript">
+        (function(){ var widget_id = 'mdLVYHVxl7';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+    <!-- {/literal} END JIVOSITE CODE -->
+
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-2" tabindex="0" style="display: none;"></ul><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-3" tabindex="0" style="display: none;"></ul><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-4" tabindex="0" style="display: none;"></ul><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-5" tabindex="0" style="display: none;"></ul><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div id="jivo-iframe-container" style="opacity: 0; visibility: hidden; width: 0px; height: 0px; overflow: hidden;"><iframe src="javascript:void(0)" allow="autoplay" title="Jivochat" name="jivo_container" id="jivo_container" frameborder="no"></iframe></div><jdiv><jdiv class="globalClass_2fd7"><jdiv style="animation: 300ms cubic-bezier(0.39, 0.24, 0.21, 0.99) 0s 1 normal both running Label_CLOSE_WIDGET_ad43; display: block; z-index: 2147483646; position: fixed;"><jdiv class="label_4dd9 _bottom_df1a notranslate" id="jvlabelWrap" style="background: linear-gradient(95deg, rgb(47, 50, 74) 20%, rgb(66, 72, 103) 80%); right: calc(50% - 130px); bottom: 0px;"><jdiv class="hoverl_bca9"><jdiv class="lbContainer_ff4e"></jdiv></jdiv><jdiv class="text_6738 _noAd_ee13 contentTransitionWrap_482f" style="font-size: 12px; font-family: Arial, Arial; font-style: normal; color: rgb(240, 241, 241);">Задайте нам вопрос</jdiv><jdiv class="leafCont_9c38"><jdiv class="leaf_5b58 _bottom_84dc"><jdiv class="cssLeaf_3cf3" style="background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2240%22%20viewBox%3D%220%200%2032%2040%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23424867%22%20d%3D%22M0%200h9.02L32%2033.196V40H0z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2318C139%22%20d%3D%22M9%200c3.581.05%2023%205.426%2023%2033.08v.03C18.922%2030.751%209%2019.311%209%205.554V0z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A&quot;);"></jdiv></jdiv></jdiv><jdiv class="copyContainer_80c2"><jdiv class="copyright_6729 _bottom_1b50 __ru_d700" style="background: linear-gradient(95deg, rgb(47, 50, 74) 20%, rgb(66, 72, 103) 80%);"><jdiv class="text_addd" style="color: rgb(240, 241, 241);"><a href="https://www.jivo.ru/i_sa/?utm_source=logist623045.4logist.com&amp;utm_medium=link&amp;utm_content=label_tooltip&amp;utm_campaign=from_widget" rel="nofollow noopener" target="_blank" class="link_05a2 __ru_d700">Бизнес-мессенджер <jdiv class="logoIcon_bea8" style="background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225.688%22%20height%3D%2218%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23F0F1F1%22%20d%3D%22M7.155%205.93H6.134a.4.4%200%2000-.287.128.378.378%200%2000-.123.268v7.448a.377.377%200%2000.123.28.389.389%200%2000.287.12h1.021a.382.382%200%2000.274-.12.353.353%200%2000.131-.28V6.33a.375.375%200%2000-.131-.268.353.353%200%2000-.274-.132zm9.313.02h-.824a.557.557%200%2000-.57.228l-2.353%205.04h-.041l-2.242-5.04a.379.379%200%2000-.369-.228H8.958a.356.356%200%2000-.328.14.289.289%200%2000.021.32l3.648%207.748a.376.376%200%2000.369.208h.111a.373.373%200%2000.348-.208l3.648-7.748a.288.288%200%2000.021-.32.368.368%200%2000-.328-.14zm4.935-.188a4.312%204.312%200%2000-4.3%204.276%204.212%204.212%200%20001.254%203.044%204.11%204.11%200%20003.038%201.284%204.069%204.069%200%20003.025-1.284%204.181%204.181%200%20001.262-3.044%204.313%204.313%200%2000-4.279-4.276zm1.783%206.156a2.379%202.379%200%2001-1.783.756%202.4%202.4%200%2001-1.8-.744%202.623%202.623%200%2001-.725-1.888%202.529%202.529%200%2001.725-1.84%202.427%202.427%200%20011.8-.736%202.368%202.368%200%20011.783.736%202.525%202.525%200%2001.725%201.84%202.669%202.669%200%2001-.725%201.876zM3.322%205.93H.416a.392.392%200%2000-.275.128.373.373%200%2000-.131.272v1a.386.386%200%2000.131.28.4.4%200%2000.275.12h1.475v7.17a1.331%201.331%200%2001-1.18%201.312H.416a.4.4%200%2000-.287.12.371.371%200%2000-.123.28v1a.415.415%200%2000.111.28.394.394%200%2000.295.12h.143a3.13%203.13%200%20003.152-2.9.848.848%200%2000.017-.188V6.33a.377.377%200%2000-.123-.28.365.365%200%2000-.279-.12z%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%2318C139%22%20d%3D%22M.03-.006c-.254%204.676%203.681%205.34%203.681%205.34C3.515.214.03-.006.03-.006z%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E&quot;);"></jdiv></a></jdiv><jdiv class="corner_30d8" style="border-top-color: rgb(66, 72, 103);"></jdiv></jdiv></jdiv></jdiv></jdiv><jdiv id="jivo-player" class="player_a764"><audio preload="auto" id="jivo-sound-agent_message"><source src="https://code-eu1.jivosite.com/sounds/agent_message.mp3" type="audio/mpeg"><source src="https://code-eu1.jivosite.com/sounds/agent_message.ogg" type="audio/ogg; codecs=vorbis"><source src="https://code-eu1.jivosite.com/sounds/agent_message.wav" type="audio/wav"></audio><audio preload="auto" id="jivo-sound-notification"><source src="https://code-eu1.jivosite.com/sounds/notification.mp3" type="audio/mpeg"><source src="https://code-eu1.jivosite.com/sounds/notification.ogg" type="audio/ogg; codecs=vorbis"><source src="https://code-eu1.jivosite.com/sounds/notification.wav" type="audio/wav"></audio><audio preload="auto" id="jivo-sound-outgoing_message"><source src="https://code-eu1.jivosite.com/sounds/outgoing_message.mp3" type="audio/mpeg"><source src="https://code-eu1.jivosite.com/sounds/outgoing_message.ogg" type="audio/ogg; codecs=vorbis"><source src="https://code-eu1.jivosite.com/sounds/outgoing_message.wav" type="audio/wav"></audio></jdiv><jdiv id="jcont" style="animation: 300ms cubic-bezier(0.39, 0.24, 0.21, 0.99) 0s 1 normal both running WidgetContainer_CLOSE_WIDGET_d181; --right:30px; --height:402px; position: fixed; display: block; --labelwidth:300px; --labelright:calc(50% - 130px);"><jdiv class="wrap_6a45" dir="ltr" id="jivo_action"><jdiv class="closeButton_597a" id="jivo_close_button"><jdiv class="closeIcon_a053" style="background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20transform%3D%22translate(2%202)%22%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFF%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212.75%22%20stroke%3D%22%23222D38%22%20stroke-width%3D%221.5%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22%23222D38%22%20opacity%3D%221%22%20transform%3D%22translate(6%206)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22rotate(45%206.24%206.01)%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22scale(-1%201)%20rotate(45%200%20-9.058)%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A&quot;);"></jdiv></jdiv></jdiv><jdiv class="contentWrapper_4c1e"></jdiv></jdiv><jdiv class="pseudoHeight_c8e1"></jdiv><jdiv class="jivoMouseTrack_1944"></jdiv></jdiv></jdiv></body>
+</html>
